@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get "/about", to: "pages#about"
 
   get "/sign_up", to: "users#sign_up"
-  post "/account_verify", to: "users#accout_verify"
+  post "/account_verify", to: "users#sign_up"
 end

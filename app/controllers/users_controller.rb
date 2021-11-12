@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(clean_params)
 
     if @user.save
-     redirect_to "/"
+     redirect_to "/account_verify"
     else
      render :sign_up 
     end
