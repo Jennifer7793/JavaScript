@@ -3,6 +3,21 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def sign_in
+    @user = User.new
+  end
+
+  def check
+    u = User.login(params[:user])
+    if u 
+      session[:userid] = u.id
+      redirect_to "/"
+    else
+      render html: "no user"
+    end
+  end
+end
+
   def account_verify
     clean_params = params.require(:user).permit(:username, :password, :email)
 
@@ -14,4 +29,3 @@ class UsersController < ApplicationController
      render :sign_up 
     end
   end
-end
