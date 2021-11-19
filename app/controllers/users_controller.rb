@@ -19,13 +19,18 @@ class UsersController < ApplicationController
 end
 
   def account_verify
-    clean_params = params.require(:user).permit(:username, :password, :email)
 
     @user = User.new(clean_params)
 
     if @user.save
-     redirect_to "/account_verify"
+     redirect_to "/"
     else
      render :sign_up 
     end
   end
+
+  private
+  def clean_params
+    user_params.require(:user).permit(:username, :password, :email)
+  end
+end
