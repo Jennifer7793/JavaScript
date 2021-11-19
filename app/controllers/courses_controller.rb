@@ -7,7 +7,6 @@ class UsersController < ApplicationController
   end
 
   def before_create
-    redirect_to '/courses'
     redirect_to course_path
   end
 end

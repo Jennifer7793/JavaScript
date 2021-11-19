@@ -1,6 +1,14 @@
 <h1>新增課程</h1>
 
-<%= form_for(@course) do |f| %>
+<% if @course.errors.any? %>
+  <ul>
+    <% @course.errors.full_message.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for(@course) do |form| %>
 <div class="fields">
   <%= form.label :name %>
   <%= form.text_field :name %>
