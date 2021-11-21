@@ -1,4 +1,4 @@
-<h1>新增課程</h1>
+<h1>編輯課程</h1>
 
 <% if @course.errors.any? %>
   <ul>
@@ -26,5 +26,5 @@
     <%= f.number_field :hour %>
   </div>
 
-  <%= f.submit %>
+  <%= f.submit "編輯" %>
 <% end %>

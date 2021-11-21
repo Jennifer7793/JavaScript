@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root "pages#index" 
+  resources :courses
+
+  root "pages#index"
 
   get "/about", to: "pages#about"
 
