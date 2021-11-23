@@ -3,8 +3,20 @@
 //   puts "hi"
 // end
 
+// hello();
+
+// var hello = function() {
+//   console.log("hi")
+// };
+
 hello();
 
-function hello(){
+let hello = function() {
   console.log("hi")
-}
+};
+
+// hello();
+
+// function hello(){
+//   console.log("hi")
+// }
