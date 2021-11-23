@@ -1,7 +1,7 @@
 const list = [1, 2, 3, 4, 5]
 
-const result = list.reduce(function (x) {
-  return var(x = 0, x < 5, x++)
-})
+const reducer = (previousValue, currentValue) => previousValue + currentValue
 
-console.log(result)
+console.log(list.reduce(reducer));
+
+// const result = list.filter
