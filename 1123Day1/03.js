@@ -3,8 +3,8 @@
 //   puts "hi"
 // end
 
+hello();
+
 function hello(){
   console.log("hi")
 }
-
-hello();
