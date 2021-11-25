@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const ABC = document.getElementsByClassName('hi')
+    for (var a = 0; a < 3; a = a+1 ) {
+    ABC[a].innerText = "Z";
+    }
+  })
+</script>
+<body>
+  <div id="hi">Hello</div>
+  <span class="hi">A</span>
+  <span class="hi">B</span>
+  <span class="hi">C</span>
+  <input type="submit" value="Press me">
+</body>
+</html>
