@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const btn = document.querySelector("#btn");
+  const link = document.querySelector("#link");
 
-  btn.addEventListener("click", function(e) {
-    e.preventDefault()''
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
     console.log("go!");
-  })
+  });
 
   // const txt = document.getElementById('hi')
   // txt[].innerText = "World";
@@ -13,4 +13,4 @@ document.addEventListener("DOMContentLoaded", function() {
   // for (var a = 0; a < 3; a = a+1 ) {
   // ABC[a].innerText = "Z";
   // }
-})
+});
