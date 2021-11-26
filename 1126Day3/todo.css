@@ -1,0 +1,13 @@
+input#taskInput{
+  font-style: 40px;
+  padding: 4px 8px;
+}
+div{
+  display: flex;
+  justify-content: space-between;
+}
+.todoItem{
+  display: inline;
+  display: flex;
+  justify-content: space-between;
+}
