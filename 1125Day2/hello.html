@@ -5,10 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script>
+    document.addEventListener("DomcontentLoaded", function() {
+      // const d = document.getElementById('hi')
+      const d = document.getElementByClassName('cc')
+      console.log(d)
+    })
+  </script>
 </head>
-<script src="script.js"></script>
 <body>
-  <div id="hi">Hello</div>
-  <a href="#link">Press me</a>
+  <div id="hi" class="cc">Hello</div>
+  <span class="cc">World</span>
+  <input type="submit" value="pressMe">
 </body>
 </html>
