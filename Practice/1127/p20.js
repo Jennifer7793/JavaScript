@@ -4,4 +4,4 @@ amount = amount * 2;
 amount = amount + (amount * TAX_RATE);
 
 console.log(amount);
-console.log(amount.toFixed(2));
+console.log(amount.toFixed(2)); //指定數字要約整(round)到小數點第幾位
