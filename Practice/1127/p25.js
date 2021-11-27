@@ -8,6 +8,6 @@ while (true) {
   i++;
 } */
 
-for (var i = 0; i <= 9; i++) {
+for (var i = 0; i <= 9; i++) { //for (初始化; 條件; 更新)
   console.log(i);
 }
