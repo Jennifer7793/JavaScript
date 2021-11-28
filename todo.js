@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   const taskInput = document.querySelector("#taskInput");
-  const todoList = document.querySelector("#todo-list");
+  const todoLists = document.querySelector("#todo-list");
 
   taskInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
@@ -16,13 +16,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
       //1.6 Delet task item
       closeBtn.addEventListener("click", (e) => {
-        e.target.parentNote.remove();
+        e.target.parentNode.remove();
       });
 
-      todoList.appendChild(closeBtn);
+      todo.appendChild(closeBtn);
 
       if (inputValue !== "")
-      todoList.prepend(todo);
+      todoLists.prepend(todo);
       //2. elimate input content
       e.target.value = "";
     }
