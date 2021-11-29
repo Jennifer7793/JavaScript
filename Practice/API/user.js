@@ -1,12 +1,41 @@
 $().ready(function () {
+  const userList = document.querySelector("#userList");
   $.ajax({
-    url: 'https://randomuser.me/api/',
+    url: 'https://randomuser.me/api/?results=10',
     dataType: 'json',
-    success: function(data) {
-      console.log(data);
+    success: function({ results }) {
+      results.forEach((user) => {
+        let { first, last } = user.name;
+        let { thumbnail } = user.picture;
+        console.log(`${first} ${last}`);
+
+        const el = document.createElement('li')
+        el.innerHTML = `<img src=" ${thumbnail}" />${first} ${last}`;
+        userList.appendChild(el);
+      }) 
     }
   });
 });
+
+// $().ready(function () {
+//   $.ajax({
+//     url: 'https://randomuser.me/api/',
+//     dataType: 'json',
+//     success: function(data) {
+//       console.log(data);
+//     }
+//   });
+// });
+
+// $().ready(function () {
+//   $.ajax({
+//     url: 'https://randomuser.me/api/',
+//     dataType: 'json',
+//     success: function(data) {
+//       console.log(data);
+//     }
+//   });
+// });
 
 // $().ready(function () {
 //   $.ajax({
