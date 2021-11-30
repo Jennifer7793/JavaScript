@@ -15,8 +15,9 @@
     <td><%= course.price %></td>
     <td><%= course.intro %></td>
     <td><%= course.hour %></td>
-    <td><%= link_to 'edit', edit_course_path(course.id) %></td>
-    <td><%= link_to 'delete', course_path(course.id), method: "delete", data: {confirms "Sure to delete?"} %></td>
+    <td><%= link_to 'view', course_path(course) %></td>
+    <td><%= link_to 'edit', edit_course_path(course) %></td>
+    <td><%= link_to 'delete', course_path(course), method: 'delete', data: {confirms 'Sure to delete?'} %></td>
   </tr>
-  <% end %>
+  <% end %>  
 </table>

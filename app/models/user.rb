@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   validates :email, :username, presence: true
   
+  has_many :courses
+
   before_create :encrypt_password
 
   def self.login(user_info)

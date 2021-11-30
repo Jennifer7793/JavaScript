@@ -1,5 +1,15 @@
 class CoursesController < ApplicationController
+  before_action :set_course, only: [:edit, :update, :destroy]
+  before_action :authenticate!, except: [:index, :show]
+
   def index
+    @courses = Course.all
+  end
+
+  def show
+    @course = Course.find(params[:id])
+    @review = Review.new
+    @reviews = @course.reviews.order(id: :desc)
   end
 
   def new
@@ -7,31 +17,36 @@ class CoursesController < ApplicationController
   end
 
   def create
-    @course = Course.new(course_params)
+    @course = current_user.courses.build(course_params)
 
     if @course.save
-      redirect_to courses_path
+      redirect_to courses_path, notice: "新增課程成功"
     else
       render :new
     end
   end
 
+  def edit
+  end
+
   def update
-    @course = Course.find_by(id: params[:id])
-    if @course.update(course_params), notice: "updated!"
-      redirect_to courses_path
+    if @course.update(course_params)
+      redirect_to courses_path, notice: "課程更新成功"
     else
       render :edit
     end
   end
 
   def destroy
-    @course = Course.find_by(id: params[:id])
-    @course.destroy, notice: "Delete!"
-    redirect_to courses_path
+    @course.destroy
+    redirect_to courses_path, notice: "課程已刪除"
   end
 
   private
+  def set_course
+    @course = current_user.courses.find(params[:id])
+  end
+
   def course_params
     params.require(:course).permit(:name, :price, :intro, :hour)
   end

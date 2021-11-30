@@ -20,12 +20,18 @@ class UsersController < ApplicationController
   def check
     u = User.login(params[:user])
     if u
-      session[:whatever123] = u.id
+      session[:check_user] = u.id
       redirect_to "/"
     else
       render html: "no user"
     end
   end
+
+  def sign_out
+    session[:check_user] = nil
+    redirect_to courses_path, notice: '已登出'
+  end
+
 
   private
   def user_params
