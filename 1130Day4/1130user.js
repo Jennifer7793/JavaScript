@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     .catch((err) => {
       console.log(hi);
     });
+    
 // document.addEventListener("DOMContentLoaded", function() {
 //   const f = fetch("https://randomuser.me/api/?results=5");
 //   const t = f.then((x) => {
