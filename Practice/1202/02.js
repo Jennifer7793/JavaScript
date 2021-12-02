@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
   const add = document.querySelector(".add");
 
   add.addEventListener("click", () => {
-    console.log("Heyyy");
+    const newItem = document.createElement('div')
+    // console.log("Heyyy");
   })
 });
