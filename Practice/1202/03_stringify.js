@@ -10,4 +10,13 @@ console.log(JSON.stringify([new Number(3), new String("false"), new Boolean(fals
 console.log(JSON.stringify({ x: [10, undefined, function(){}, Symbol('')]}));
 //{"x":[10,null,null,null]}
 
+console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
 console.log(JSON.stringify(new Date(2020, 25, 2, 23, 20)));
+//"2006-01-02T07:04:05.000Z"
+//"2022-02-02T15:20:00.000Z"
+
+console.log(JSON.stringify({})); //{}
+console.log(JSON.stringify(true)); //true
+console.log(JSON.stringify('foo')); //"foo"
+console.log(JSON.stringify([1, 'false', false])); //[1, "false", false]
+console.log(JSON.stringify({ x: 5})); //{"x":5}
