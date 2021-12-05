@@ -1,0 +1,16 @@
+// Strings are concatenated with +
+"Hello " + "world!"; // = "Hello world!"
+
+// ... which works with more than just strings
+"1, 2, " + 3; // = "1, 2, 3"
+"Hello " + ["world", "!"]; // = "Hello world,!"
+
+// ...which can result in some weird behaviour...
+13 + !0; // 14
+"13" + !0; // '13true'
+
+// You can access characters in a string with `charAt`
+"This is a string".charAt(0);  // = 'T'
+
+// false, null, undefined, NaN, 0 and "" are falsy; everything else is truthy.
+// Note that 0 is falsy and "0" is truthy, even though 0 == "0".
