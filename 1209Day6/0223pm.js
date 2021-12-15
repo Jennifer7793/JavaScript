@@ -7,7 +7,7 @@ const h = {
   }
 }
 
-h.hi() //18
+h.hi() //undefined
 
 // //2:34pm 箭頭函式沒有自己的this & argument
 // const hi = (a, b, c) => {
