@@ -1,10 +1,11 @@
 function humanReadableTimer(seconds) {
   // const result = new Date(seconds * 1000).toISOString().slice(11, 19);
   // console.log(result);
-    var hr = Math.floor(seconds/3600)
-    var min = Math.round(Math.floor(seconds % 3600)/60)
-    var sec = ((seconds % 3600) % 60)
-  return  `${hr}:${min}:${sec}`   
+  var hr = Math.floor(seconds/3600)
+  var min = Math.trunc(Math.floor(seconds % 3600)/60) //round down to the nearest whole num
+  var sec = ((seconds % 3600) % 60)
+  
+  return `${hr}:${min}:${sec}`   
 }
 
 // function humanReadableTimer(seconds) {
