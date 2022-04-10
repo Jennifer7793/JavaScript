@@ -4,7 +4,9 @@ function humanReadableTimer(seconds) {
   var hr = Math.floor(seconds/3600)
   var min = Math.trunc(Math.floor(seconds % 3600)/60) //round down to the nearest whole num
   var sec = ((seconds % 3600) % 60)
-  
+  if hr < 10 || min < 10 || sec < 10 {
+    return "0" + `${hr}`
+  }
   return `${hr}:${min}:${sec}`   
 }
 
