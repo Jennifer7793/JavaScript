@@ -8,6 +8,7 @@
 </head>
 <body>
   <h2 id="demoStyle">What can JS do?</h2>
+  <p id="showScript"></p>
   <p id="demo">JS can change HTML content</p>
   <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JS!"'>Click Me!</button>
 
@@ -18,5 +19,7 @@
   <button type="button" onclick="document.getElementById('demo').style.display='none'">Hide above</button>
 
   <button type="button" onclick="document.getElementById('demo').style.display='block'">Show above</button>
+
+  <script>document.getElementById('showScript').innerHTML='I want to learn JS';</script>
 </body>
 </html>
