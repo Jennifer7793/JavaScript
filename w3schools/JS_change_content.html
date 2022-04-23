@@ -5,21 +5,44 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script>
+    function myFunction(){
+      document.getElementById('changeParagraph').innerHTML='paragraph changed'
+    }
+  </script>
 </head>
 <body>
   <h2 id="demoStyle">What can JS do?</h2>
   <p id="showScript"></p>
   <p id="demo">JS can change HTML content</p>
   <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JS!"'>Click Me!</button>
-
+  
   <button type="button" onclick='document.getElementById("demo").innerHTML = "JS can change HTML content"'>Change back!</button>
-
+  
   <button type="button" onclick="document.getElementById('demoStyle').style.color='red'">ChangeStyle</button>
-
+  
   <button type="button" onclick="document.getElementById('demo').style.display='none'">Hide above</button>
-
+  
   <button type="button" onclick="document.getElementById('demo').style.display='block'">Show above</button>
-
+  
   <script>document.getElementById('showScript').innerHTML='I want to learn JS';</script>
+  
+  <h2>Demo JS in Head</h2>
+  <p id="changeParagraph">I'm gg to be changed</p>
+  <button type="button" onclick="myFunction()">Gogo</button>
+  
+  <h2>Demo JS in Body</h2>
+  <p id="changePInBody">I'm gg to be changed bcoz of body script</p>
+  <button type="button" onclick="bodyFunction()">Yoyo</button>
+  
+  <script> 
+  function bodyFunction() {
+    document.getElementById('changePInBody').innerHTML="I was changed by body script";
+  }
+  </script>
+  <h2>Script from external</h2>
+  <p id="myScript">I'm gg to be changed by external myScript.js</p>
+  <button type="button" onclick="externalFunction()">Change above</button>
+  <script src="myScript.js"></script>
 </body>
 </html>
