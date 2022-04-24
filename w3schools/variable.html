@@ -13,6 +13,7 @@
   <p id="constLet"></p>
   <p id="carVariable"></p>
   <p id="strNum"></p>
+  <p id="numStr"></p>
   <script>
     const price1 = 5;
     const price2 = 6;
@@ -24,6 +25,9 @@
 
     let x = "5" + 2 + 3; //If put a num in quotes, the rest of the nums will be treated as strings, and concatenated.
     document.getElementById('strNum').innerHTML = x;
+
+    let y = 3 + 2 + "5"
+    document.getElementById('numStr').innerHTML = y;
   </script>
   <p>x is defined as a variable, x is assigned the value of 6</p>
   <p id="demo"></p>
