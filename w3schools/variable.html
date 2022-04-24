@@ -11,11 +11,19 @@
   <li>General rule, always declare variables with <b>const</b></li>
   <li>If you think the value of the variable can change, use <b>let</b></li>
   <p id="constLet"></p>
+  <p id="carVariable"></p>
+  <p id="strNum"></p>
   <script>
     const price1 = 5;
     const price2 = 6;
     let total = price1 + price2; //price1 & price2 r constant values, cannot be changed; total is declared with let which value can be changed.
+
     document.getElementById("constLet").innerHTML = total
+    let carName = "Mazda"
+    document.getElementById("carVariable").innerHTML = "KL's car brand is " + carName;
+
+    let x = "5" + 2 + 3; //If put a num in quotes, the rest of the nums will be treated as strings, and concatenated.
+    document.getElementById('strNum').innerHTML = x;
   </script>
   <p>x is defined as a variable, x is assigned the value of 6</p>
   <p id="demo"></p>
