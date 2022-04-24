@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Redeclaring a variable using var</h2>
+  <p id="demo"></p>
+  <h2>Redeclaring a variable using let</h2>
+  <p id="demoLet"></p>
+  <script>
+    var x = 10
+    {
+      var x = 2
+    }
+    document.getElementById('demo').innerHTML = x //will redeclare the variable outside the block
+    
+    let y = 10
+    {
+      let y = 10
+    }
+    document.getElementById('demoLet').innerHTML = y //let won't redeclare the variable outside the block
+  </script>
+</body>
+</html>
