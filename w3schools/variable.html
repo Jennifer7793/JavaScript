@@ -8,6 +8,15 @@
 </head>
 <body>
   <h2>JS variables</h2>
+  <li>General rule, always declare variables with <b>const</b></li>
+  <li>If you think the value of the variable can change, use <b>let</b></li>
+  <p id="constLet"></p>
+  <script>
+    const price1 = 5;
+    const price2 = 6;
+    let total = price1 + price2; //price1 & price2 r constant values, cannot be changed; total is declared with let which value can be changed.
+    document.getElementById("constLet").innerHTML = total
+  </script>
   <p>x is defined as a variable, x is assigned the value of 6</p>
   <p id="demo"></p>
   <h2>JS operators</h2>
