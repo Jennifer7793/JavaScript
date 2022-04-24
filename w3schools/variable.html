@@ -10,10 +10,16 @@
   <h2>JS variables</h2>
   <p>x is defined as a variable, x is assigned the value of 6</p>
   <p id="demo"></p>
+  <h2>JS operators</h2>
+  <p id="operators"></p>
+  <h2>JS expressions</h2>
+  <p id="expressions"></p>
   <script>
     let x;
     x = 6;
     document.getElementById('demo').innerHTML = x;
+    document.getElementById('operators').innerHTML = (x + x) * 10;
+    document.getElementById('expressions').innerHTML = x * 10
   </script>
 </body>
 </html>
