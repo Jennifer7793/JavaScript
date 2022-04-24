@@ -17,7 +17,8 @@
   <script>
     const price1 = 5;
     const price2 = 6;
-    let total = price1 + price2; //price1 & price2 r constant values, cannot be changed; total is declared with let which value can be changed.
+    const $$ = 100 //in jQuery, $ used to select HTML elements. $("p") means select all p elements.
+    let total = price1 + price2 + $$; //price1 & price2 r constant values, cannot be changed; total is declared with let which value can be changed.
 
     document.getElementById("constLet").innerHTML = total
     let carName = "Mazda"
