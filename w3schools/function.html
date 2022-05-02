@@ -9,6 +9,7 @@
 <body>
   <h2>JS functions</h2>
   <p id="demo"></p>
+  <p id="FtoC"></p>
   <script>
     var x = myFunction(4, 3);
     document.getElementById('demo').innerHTML = x;
@@ -16,6 +17,11 @@
     function myFunction(a, b) {
       return a * b
     }
+
+    function toCelsius(f) {
+      return (5/9) * (f-32);
+    }
+    document.getElementById('FtoC').innerHTML = toCelsius(77);
   </script>
 </body>
 </html>
