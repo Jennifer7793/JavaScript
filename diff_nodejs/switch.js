@@ -1,12 +1,31 @@
 var day = new Date().getDay();
-switch (day) {
-  case 6:
+for (var i = 0; i < 7; i++) {
+  switch (i) {
+    case 6:
   case 0:
     console.log('It\'s weekend so is off day');
     break;
   default:
     console.log('Today is weekday so no off');
+  }
 }
+// above returns as below: 
+// It's weekend so is off day
+// Today is weekday so no off
+// Today is weekday so no off
+// Today is weekday so no off
+// Today is weekday so no off
+// Today is weekday so no off
+// It's weekend so is off day
+  
+// switch (day) {
+//   case 6:
+//   case 0:
+//     console.log('It\'s weekend so is off day');
+//     break;
+//   default:
+//     console.log('Today is weekday so no off');
+// }
 
 // switch (day) {
 //   case 6:
