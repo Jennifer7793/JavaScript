@@ -8,3 +8,8 @@ for (var i in list) {
   var obj = list[i];
   console.log(obj.id+':'+obj.score);
 }
+
+// list down the objs in arr
+for (var i in list) {
+  console.log(list[i]);
+}
